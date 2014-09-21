@@ -56,7 +56,7 @@ class Window(Gtk.Window):
             del search_term[0]
             if len(search_term) == 0:
                 return 0
-        # if there are no option, go to default site
+        # if there is no option, go to default site
         else:
             goto = site['default-search']
 
@@ -72,7 +72,7 @@ class Window(Gtk.Window):
         with open(logfile, 'a') as l:
             l.writelines(log)
 
-        # goto website
+        # go to website
         base = config.browser['default']
         os.system(base + goto % t)
         sys.exit()
