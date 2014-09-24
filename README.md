@@ -6,6 +6,6 @@ This desktop application is search wrapping application using Gtk.
 web_search
 - websearh.py
 - websearch
-    - __init__.py
+    - \_\_init\_\_.py
     - config.py
     - prediction.py
