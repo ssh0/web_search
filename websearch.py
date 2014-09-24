@@ -62,7 +62,7 @@ class Window(Gtk.Window):
 
         # search term are joined mostly with '+'
         if len(search_term) > 1:
-            t = '+'.join(search_term)
+            t = u' '.join(search_term)
         else:
             t = search_term[0]
 
