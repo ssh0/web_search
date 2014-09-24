@@ -62,19 +62,20 @@ class Window(Gtk.Window):
 
         # search term are joined mostly with '+'
         if len(search_term) > 1:
-            t = u' '.join(search_term)
+            t = ' '.join(search_term)
         else:
             t = search_term[0]
 
         # save the log to logfile
         date = commands.getoutput('date +%F_%T')
-        log =  date + ' ' + t.replace('+', ' ') + '\n'
+        log =  date + ' ' + t + '\n'
         with open(logfile, 'a') as l:
             l.writelines(log)
 
         # go to website
         base = config.browser['default']
-        os.system(base + goto % t)
+        goto = goto % t
+        os.system(base + '"' + goto + '"')
         sys.exit()
 
 
