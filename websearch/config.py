@@ -40,6 +40,9 @@ site = {
         # "q" Qiita検索
         "-q": r"http://qiita.com/search?q=%s",
 
+        # "q" Qiita 検索
+        "-q": r"http://qiita.com/search?q=%s",
+
         # "-t": 翻訳
         "-t": r"http://ejje.weblio.jp/content/%s"
         }
