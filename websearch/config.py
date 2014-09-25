@@ -36,9 +36,6 @@ site = {
 
         # "sc" Google Scholar検索
         "-sc": r"http://scholar.google.co.jp/scholar?q=%s&hl=ja&as_sdt=0,5",
-        
-        # "q" Qiita検索
-        "-q": r"http://qiita.com/search?q=%s",
 
         # "q" Qiita 検索
         "-q": r"http://qiita.com/search?q=%s",
