@@ -52,15 +52,17 @@ class Window(Gtk.Window):
         # find option
         option= search_term[0]
         if option in site:
-            goto = site[option]
+            goto = site[option][0]
+            n = site[option][1]
             del search_term[0]
             if len(search_term) == 0:
                 return 0
         # if there is no option, go to default site
         else:
-            goto = site['default-search']
+            goto = site['default-search'][0]
+            n = site['default-search'][1]
 
-        # search term are joined mostly with '+'
+        # join search terms
         if len(search_term) > 1:
             t = ' '.join(search_term)
         else:
@@ -74,7 +76,8 @@ class Window(Gtk.Window):
 
         # go to website
         base = config.browser['default']
-        goto = goto % t
+        words = tuple([t for i in range(n)])
+        goto = goto % words
         os.system(base + '"' + goto + '"')
         sys.exit()
 

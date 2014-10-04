@@ -17,29 +17,30 @@ browser = {"default":
 
 site = {
         # default: Google検索
-        "default-search": r"https://www.google.co.jp/#q=%s",
+        "default-search": (r"https://www.google.co.jp/#q=%s", 1),
 
         # "w": Wikipedia
-        "-w": r"https:ja.wikipedia.org/wiki/%s",
+        "-w": (r"https:ja.wikipedia.org/wiki/%s", 1),
 
         # "n": niconico動画
-        "-n": r"http://www.nicovideo.jp/search/%s",
+        "-n": (r"http://www.nicovideo.jp/search/%s", 1),
 
         # "p": Google画像検索
-        #"-p": r"https://www.google.com/search?q=%s&um=1&ie=UTF-8&hl=ja&tbm=isch&source=og&sa=N&tab=wi",
+        "-p": (r"http://www.google.com/search?hl=ja&site=imghp&tbm=isch&source=hp&q=%s&oq=%s", 2),
+
 
         # "y": Youtubeで検索
-        "-y": r"http://www.youtube.com/results?search_query=%s&sm=3",
+        "-y": (r"http://www.youtube.com/results?search_query=%s&sm=3", 1),
 
         # "rt" Yahooリアルタイム検索
-        "-rt": r"http://realtime.search.yahoo.co.jp/search?p=%s&ei=UTF-8",
+        "-rt": (r"http://realtime.search.yahoo.co.jp/search?p=%s&ei=UTF-8", 1),
 
         # "sc" Google Scholar検索
-        "-sc": r"http://scholar.google.co.jp/scholar?q=%s&hl=ja&as_sdt=0,5",
+        "-sc": (r"http://scholar.google.co.jp/scholar?q=%s&hl=ja&as_sdt=0,5", 1),
 
         # "q" Qiita 検索
-        "-q": r"http://qiita.com/search?q=%s",
+        "-q": (r"http://qiita.com/search?q=%s", 1),
 
         # "-t": 翻訳
-        "-t": r"http://ejje.weblio.jp/content/%s"
+        "-t": (r"http://ejje.weblio.jp/content/%s", 1)
         }
