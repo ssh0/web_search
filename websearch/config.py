@@ -36,7 +36,7 @@ site = {
         "-rt": (r"http://realtime.search.yahoo.co.jp/search?p=%s&ei=UTF-8", 1),
 
         # "sc" Google Scholar検索
-        "-sc": (r"http://scholar.google.co.jp/scholar?q=%s&hl=ja&as_sdt=0,5", 1),
+        "-sc": (r"http://scholar.google.co.jp/scholar?as_vis=1&q=%s&hl=ja&as_sdt=1,5", 1),
 
         # "q" Qiita 検索
         "-q": (r"http://qiita.com/search?q=%s", 1),
