@@ -28,6 +28,8 @@ site = {
         # "p": Google画像検索
         "-p": (r"http://www.google.com/search?hl=ja&site=imghp&tbm=isch&source=hp&q=%s&oq=%s", 2),
 
+        # "m": Google Map
+        "-m": (r"https://www.google.com/maps/place/%s", 1),
 
         # "y": Youtubeで検索
         "-y": (r"http://www.youtube.com/results?search_query=%s&sm=3", 1),
