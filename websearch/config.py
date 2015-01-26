@@ -12,6 +12,7 @@ browser = {"default":
 #           "chromium-browser -new-tab "
 #           "google-chrome -new-tab "
 #           "opera -newtab "
+#           "luakit -n "
             ,
            }
 
