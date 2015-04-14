@@ -32,6 +32,26 @@ site = {
         # "m": Google Map
         "-m": (r"https://www.google.com/maps/place/%s", 1),
 
+        # "mfh": Google Map Navigation "from Home to ***"
+        # if you set the searching language 'English',
+        # then replace "自宅" to "Home"
+        "-mfh": (r"https://www.google.com/maps/dir/自宅/%s", 1),
+
+        # "mfw": Google Map Navigation "from Work to ***"
+        # if you set the searching language 'English',
+        # then replace "職場" to "Work"
+        "-mfw": (r"https://www.google.com/maps/dir/職場/%s", 1),
+
+        # "mfh": Google Map Navigation "from *** to Home"
+        # if you set the searching language 'English',
+        # then replace "自宅" to "Home"
+        "-mth": (r"https://www.google.com/maps/dir/%s/自宅", 1),
+
+        # "mfw": Google Map Navigation "from *** to Work"
+        # if you set the searching language 'English',
+        # then replace "職場" to "Work"
+        "-mtw": (r"https://www.google.com/maps/dir/%s/職場", 1),
+
         # "y": Youtubeで検索
         "-y": (r"http://www.youtube.com/results?search_query=%s&sm=3", 1),
 
