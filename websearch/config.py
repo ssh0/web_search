@@ -52,6 +52,9 @@ site = {
         # then replace "職場" to "Work"
         "-mtw": (r"https://www.google.com/maps/dir/%s/職場", 1),
 
+        # "ip": IP address search
+        "-ip": (r"http://www.ip-adress.com/whois/%s", 1),
+
         # "y": Youtubeで検索
         "-y": (r"http://www.youtube.com/results?search_query=%s&sm=3", 1),
 
