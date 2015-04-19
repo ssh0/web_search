@@ -78,7 +78,7 @@ class Window(Gtk.Window):
         base = config.browser['default']
         words = tuple([t for i in range(n)])
         goto = goto % words
-        os.system(base + '"' + goto + '"')
+        os.system(base + '"' + goto + '"' + '&')
         sys.exit()
 
 
