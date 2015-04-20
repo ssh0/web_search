@@ -3,7 +3,9 @@
 #
 # written by Shotaro Fujimoto, September 2014
 
-logfile = "/home/shotaro/Dropbox/log.txt"
+import os
+
+logfile = os.path.expanduser("~/Dropbox/log.txt")
 
 # choose the default browser by comment out
 # or you can edit to any browser
