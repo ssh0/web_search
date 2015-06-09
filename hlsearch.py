@@ -19,7 +19,7 @@ def main():
     date = commands.getoutput('date +%F_%T')
     log = date + ' ' + searchword + '\n'
     with open(logfile, 'a') as l:
-        l.writeline(log)
+        l.writelines(log)
 
     # go to webpage
     os.system("firefox -new-tab " + '"' +  URL + '"')
