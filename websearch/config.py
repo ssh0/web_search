@@ -69,6 +69,12 @@ site = {
         # "q" Qiita 検索
         "-q": (r"http://qiita.com/search?q=%s", 1),
 
+        # "g" Githubを検索
+        "-g": (r"https://github.com/search?q=%s", 1),
+
+        # "gist" Gistを検索
+        "-gs": (r"https://gist.github.com/search?q=%s", 1),
+
         # "-t": 翻訳
         "-t": (r"http://ejje.weblio.jp/content/%s", 1)
         }
