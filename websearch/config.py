@@ -25,8 +25,11 @@ site = {
         # "w": Wikipedia
         "-w": (r"https:ja.wikipedia.org/wiki/%s", 1),
 
-        # "n": niconico動画
-        "-n": (r"http://www.nicovideo.jp/search/%s", 1),
+        # "nv": niconico動画
+        "-nv": (r"http://www.nicovideo.jp/search/%s", 1),
+
+        # "nd": ニコニコ大百科
+        "-nd": (r"http://dic.nicovideo.jp/s/al/a/%s", 1),
 
         # "p": Google画像検索
         "-p": (r"http://www.google.com/search?hl=ja&site=imghp&tbm=isch&source=hp&q=%s&oq=%s", 2),
