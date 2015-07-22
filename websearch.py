@@ -93,7 +93,7 @@ class Window(Gtk.Window):
         else:
             words = tuple([t for i in range(n)])
             url = url % words
-        os.system(browsercmd + '"' + url + '"' + '&')
+        os.system(browsercmd + "'" + url + "'" + '&')
         sys.exit()
 
 
