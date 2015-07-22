@@ -7,15 +7,14 @@ import os
 
 logfile = os.path.expanduser("~/Dropbox/log.txt")
 
-# choose the default browser by comment out
-# or you can edit to any browser
-browser = {"default":
-           "firefox -new-tab "
-#           "chromium-browser -new-tab "
-#           "google-chrome -new-tab "
-#           "opera -newtab "
-#           "luakit -n "
-            ,
+# browser option and setting toggle logging
+browser = {"=": ("firefox --new-tab ", True),
+           "=w": ("firefox --new-window ", True),
+           "=p": ("firefox --private-window ", False),
+           "=chromium": ("chromium-browser -new-tab ", True),
+           "=chrome": ("google-chrome -new-tab ", True),
+           "=opera": ("opera -newtab ", True),
+           "=luakit": ("luakit -n ", True),
            }
 
 site = {
@@ -26,7 +25,7 @@ site = {
         "-w": (r"https:ja.wikipedia.org/wiki/%s", 1),
 
         # "nv": niconico動画
-        "-nv": (r"http://www.nicovideo.jp/search/%s", 1),
+        "-n": (r"http://www.nicovideo.jp/search/%s", 1),
 
         # "nd": ニコニコ大百科
         "-nd": (r"http://dic.nicovideo.jp/s/al/a/%s", 1),

@@ -45,21 +45,33 @@ class Window(Gtk.Window):
         if len(search_term) == 0:
             return 0
 
-        # in config.py, site must be dictionary that
-        # key is option argument and value is website's address
+        # in config.py, site must be the dictionary that
+        # the key is option argument and the value is website's address
         site = config.site
 
+        # set browser
+        browseropt = search_term[0]
+        if browseropt in config.browser:
+            browsercmd = config.browser[browseropt][0]
+            logging = config.browser[browseropt][1]
+            del search_term[0]
+            if len(search_term) == 0:
+                return 0
+        else:
+            browsercmd = config.browser['='][0]
+            logging = config.browser['='][1]
+
         # find option
-        option= search_term[0]
+        option = search_term[0]
         if option in site:
-            goto = site[option][0]
+            url = site[option][0]
             n = site[option][1]
             del search_term[0]
             if len(search_term) == 0:
                 return 0
         # if there is no option, go to default site
         else:
-            goto = site['default-search'][0]
+            url = site['default-search'][0]
             n = site['default-search'][1]
 
         # join search terms
@@ -69,16 +81,19 @@ class Window(Gtk.Window):
             t = search_term[0]
 
         # save the log to logfile
-        date = commands.getoutput('date +%F_%T')
-        log =  date + ' ' + t + '\n'
-        with open(logfile, 'a') as l:
-            l.writelines(log)
+        if logging:
+            date = commands.getoutput('date +%F_%T')
+            log =  date + ' ' + t + '\n'
+            with open(logfile, 'a') as l:
+                l.writelines(log)
 
         # go to website
-        base = config.browser['default']
-        words = tuple([t for i in range(n)])
-        goto = goto % words
-        os.system(base + '"' + goto + '"' + '&')
+        if 'http://' == t[0:7] or 'https://' == t[0:8]:
+            url = t
+        else:
+            words = tuple([t for i in range(n)])
+            url = url % words
+        os.system(browsercmd + '"' + url + '"' + '&')
         sys.exit()
 
 

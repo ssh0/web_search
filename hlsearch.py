@@ -22,7 +22,7 @@ def main():
         l.writelines(log)
 
     # go to webpage
-    os.system("firefox -new-tab " + '"' +  URL + '"')
+    os.system("firefox --new-tab " + '"' +  URL + '"')
     sys.exit()
 
 if __name__ == '__main__':
