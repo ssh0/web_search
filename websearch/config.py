@@ -10,6 +10,7 @@ logfile = os.path.expanduser("~/Dropbox/log.txt")
 # browser option and setting toggle logging
 browser = {"=": ("firefox --new-tab ", True),
            "=firefox": ("firefox --new-tab ", True),
+           "=s": ("firefox --new-tab ", False),
            "=w": ("firefox --new-window ", True),
            "=p": ("firefox --private-window ", False),
            "=private": ("firefox --private-window ", False),
