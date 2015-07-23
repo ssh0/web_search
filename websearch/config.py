@@ -23,7 +23,10 @@ browser = {"=": ("firefox --new-tab ", True),
 
 site = {
         # default: Google検索
-        "default-search": (r"https://www.google.co.jp/#q=%s", 1),
+        "default-search": (r"https://www.google.co.jp/search?q=%s", 1),
+
+        # I'm feeling lucky!
+        "-!": (r"https://www.google.co.jp/search?q=%s&btnI=I", 1),
 
         # "w": Wikipedia
         "-w": (r"https:ja.wikipedia.org/wiki/%s", 1),
