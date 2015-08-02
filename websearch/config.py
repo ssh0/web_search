@@ -11,7 +11,9 @@ logfile = os.path.expanduser("~/Dropbox/log.txt")
 browser = {"=": ("firefox --new-tab ", True),
            "=firefox": ("firefox --new-tab ", True),
            "=s": ("firefox --new-tab ", False),
+           "=silent": ("firefox --new-tab ", False),
            "=w": ("firefox --new-window ", True),
+           "=window": ("firefox --new-window ", True),
            "=p": ("firefox --private-window ", False),
            "=private": ("firefox --private-window ", False),
            "=chromium": ("chromium-browser -new-tab ", True),
@@ -31,7 +33,7 @@ site = {
         # "w": Wikipedia
         "-w": (r"https:ja.wikipedia.org/wiki/%s", 1),
 
-        # "nv": niconico動画
+        # "n": niconico動画
         "-n": (r"http://www.nicovideo.jp/search/%s", 1),
 
         # "nd": ニコニコ大百科
@@ -82,10 +84,10 @@ site = {
         "-g": (r"https://github.com/search?q=%s", 1),
 
         # "gu" Githubを検索(ユーザーを検索)
-        "-g": (r"https://github.com/search?q=%s", 1),
+        "-gu": (r"https://github.com/search?q=%s&type=Users", 1),
 
         # "gs" Gistを検索
-        "-gs": (r"https://gist.github.com/search?q=%s&type=Users", 1),
+        "-gs": (r"https://gist.github.com/search?utf8=✓&q=%s", 1),
 
         # "t": 翻訳
         "-t": (r"http://ejje.weblio.jp/content/%s", 1)
