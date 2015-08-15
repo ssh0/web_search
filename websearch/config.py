@@ -68,6 +68,9 @@ site = {
         # "ip": IP address search
         "-ip": (r"http://www.ip-adress.com/whois/%s", 1),
 
+        # 'f': flickr
+        "-f": (r"https://www.flickr.com/search/?text=%s&safe_search=3", 1),
+
         # "y": Youtubeで検索
         "-y": (r"http://www.youtube.com/results?search_query=%s&sm=3", 1),
 
