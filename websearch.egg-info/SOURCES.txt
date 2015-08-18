@@ -1,9 +1,0 @@
-setup.py
-websearch/__init__.py
-websearch/config.py
-websearch/main.py
-websearch/prediction.py
-websearch.egg-info/PKG-INFO
-websearch.egg-info/SOURCES.txt
-websearch.egg-info/dependency_links.txt
-websearch.egg-info/top_level.txt
