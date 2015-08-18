@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: websearch
+Version: 1.0
+Summary: useful GUI tool for web-searching
+Home-page: https://github.com/ssh0/web_search
+Author: Shotaro Fujimoto
+Author-email: fuji101ijuf@gmail.com
+License: MIT
+Description: GUI application which makes it easy to seach something in any browser.
+        
+        It provides easy and speedy way to search keywords in any browser or in any
+        website by options. This application saves the inserted keywords and uses them
+        for autocompletion.
+        
+Platform: UNKNOWN

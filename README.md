@@ -1,11 +1,21 @@
 web_search
 ==========
 
-This desktop application is search wrapping application using Gtk.
+GUI application which makes it easy and speedy to seach something in any browser.
 
-web_search
-- websearh.py
-- websearch
-    - \_\_init\_\_.py
-    - config.py
-    - prediction.py
+Features
+--------
+
+- very configurable
+- save the search history
+- auto completion based on that history
+
+Install
+-------
+
+```
+git clone https://github.com/ssh0/web_search.git
+cd web_search
+python setup.py install
+```
+
