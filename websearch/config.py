@@ -21,6 +21,7 @@ browser = {"=": ("firefox --new-tab ", True),
            "=opera": ("opera -newtab ", True),
            "=operaprivate": ("opera -newprivatetab ", False),
            "=luakit": ("luakit -n ", True),
+           "=w3m": ("urxvtc -e w3m ", True),
            }
 
 site = {
