@@ -8,7 +8,7 @@ import os
 logfile = os.path.expanduser("~/Dropbox/log.txt")
 
 # browser option and setting toggle logging
-browser = {"=": ("firefox --new-tab ", True),
+browser = {"=": ("luakit -n ", True),
            "=firefox": ("firefox --new-tab ", True),
            "=s": ("firefox --new-tab ", False),
            "=silent": ("firefox --new-tab ", False),
