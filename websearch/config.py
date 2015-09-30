@@ -6,6 +6,7 @@
 import os
 
 logfile = os.path.expanduser("~/Dropbox/log.txt")
+use_prediction = False
 
 # browser option and setting toggle logging
 browser = {"=": ("luakit -n ", True),

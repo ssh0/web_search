@@ -18,20 +18,23 @@ class Window(Gtk.Window):
     def __init__(self):
         self.window = Gtk.Window.__init__(self, title="search")
 
-        # list data for completion from logfile
-        lists = []
-        with open(logfile) as f:
-            for s in f.readlines():
-                lists += unicode(s, 'utf-8').split()[1:]
-        lists = set(lists)
-        liststore = Gtk.ListStore(str)
-        for match in lists:
-            liststore.append([match])
+        if config.use_prediction:
+            # list data for completion from logfile
+            lists = []
+            with open(logfile) as f:
+                for s in f.readlines():
+                    lists += unicode(s, 'utf-8').split()[1:]
+            lists = set(lists)
+            liststore = Gtk.ListStore(str)
+            for match in lists:
+                liststore.append([match])
 
-        self.entry = prediction.EntryMultiCompletion()
-        self.entry.completion.set_model(liststore)
-        self.entry.completion.set_text_column(0)
-        self.entry.completion.set_popup_completion(popup_completion=True)
+            self.entry = prediction.EntryMultiCompletion()
+            self.entry.completion.set_model(liststore)
+            self.entry.completion.set_text_column(0)
+            self.entry.completion.set_popup_completion(popup_completion=True)
+        else:
+            self.entry = Gtk.Entry()
         self.entry.connect("activate", self.enter_callback)
         self.add(self.entry)
 
