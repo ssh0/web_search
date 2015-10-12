@@ -18,7 +18,6 @@ if __name__ == '__main__':
         author_email=websearch.__email__,
         license=websearch.__license__,
         url='https://github.com/ssh0/web_search',
-        # scripts=['scripts/ranger', 'scripts/rifle'],
         data_files=[('share/doc/websearch', ['README.md']),],
         packages=['websearch']
     )
